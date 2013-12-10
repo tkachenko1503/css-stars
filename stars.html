@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>stars</title>
+	<style type="text/css">
+		.exmpl { /*переставляем последовательность элементов с права на лево*/
+			unicode-bidi: bidi-override;
+  			direction: rtl;
+  			text-align: center;
+		}
+		.exmpl a { /*выставляем вряд*/
+			display: inline-block; 
+			text-decoration: none;	
+	        cursor: pointer;
+		}
+ 
+		.exmpl a  { /*дефолт стили*/
+			font-size: 40px;
+			background: -webkit-linear-gradient(#FFF, #666666);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background: -o-linear-gradient(transparent, transparent);
+			color: #666666;
+
+		}
+		.exmpl a:hover, .exmpl a:hover ~ a { /*меняем цвет при наведении*/
+			background: -webkit-linear-gradient(#F5FF00, #FF5200);
+			-webkit-background-clip: text;
+			background: -o-linear-gradient(transparent, transparent);
+			color: #FF5200;
+			
+		}
+		.exmpl a:target, .exmpl a:target ~ a { /*перекрашиваем активный элемент и все после него*/
+			background: -webkit-linear-gradient(#F5FF00, #FF5200);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background: -o-linear-gradient(transparent, transparent);
+			color: #FF5200;
+			outline: none;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="exmpl">
+		<a name="first" href="#first"> &#9733; </a>
+		<a name="second" href="#second"> &#9733; </a>
+		<a name="third" href="#third"> &#9733; </a>
+		<a name="fourth" href="#fourth"> &#9733; </a>
+		<a name="fifth" href="#fifth"> &#9733; </a>
+	</div>
+</body>
+</html>
